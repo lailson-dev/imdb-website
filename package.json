@@ -1,0 +1,12 @@
+{
+  "name": "react-11",
+  "version": "1.0.0",
+  "description": "O desafio é desenvolver a página inicial de um site de avaliação de filmes (IMDB - Internet Movies Database) utilizando apenas **HTML5** e **CSS3**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hudson Holanda",
+  "license": "ISC"
+}

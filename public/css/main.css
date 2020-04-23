@@ -1,0 +1,304 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Helpers */
+.container {
+	width: 100%;
+	max-width: 976px;
+	margin: 0 auto;
+	padding: 0 0.5rem;
+	overflow: hidden;
+}
+
+/* Header */
+.header-hero {
+	padding: 20px;
+	height: 90vh;
+	background: url(../img/capa-madmax2.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+.header-hero::after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.hero-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+}
+.hero-menu .menu {
+	display: flex;
+	list-style: none;
+}
+.menu li {
+	margin-right: 50px;
+}
+.menu li:last-child {
+	margin-right: 0;
+}
+.menu li a {
+	font-size: 0.8125rem;
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #FFF;
+	transition: all 0.3s ease;
+}
+.menu li a:hover {
+	color: #E4BB23;
+}
+.hero-menu .user-info {
+	display: flex;
+	align-items: center;
+}
+.user-info .user-image {
+	width: 45px;
+	height: 45px;
+}
+.user-image img {
+	width: 100%;
+	border-radius: 50%;
+}
+.user-info .user-name {
+	font-size: 0.8125rem;
+	margin-left: 0.9rem;
+	color: #FFF;
+}
+.hero-container {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.hero-content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	z-index: 2;
+}
+.hero-content .hero-title {
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: #FFF;
+}
+.hero-content .hero-btn {
+	padding: 15px 45px;
+	background: #E4BB23;
+	border-radius: 40px;
+	color: #000;
+	display: inline-flex;
+	align-items: center;
+}
+.hero-btn i {
+	margin-left: 15px;
+}
+.hero-categories {
+	margin: 15px 0 30px 0;
+}
+.hero-categories ul {
+	display: flex;
+	list-style: none;
+}
+.hero-categories ul li {
+	margin-right: 15px;
+	font-size:  13px;
+}
+.hero-categories ul li a {
+	color: #FFF;
+	transition: color 0.3s ease;
+	text-transform: uppercase;
+}
+.hero-categories ul li a:hover {
+	color: #BC9A1D;
+}
+.hero-info {
+	margin-top: 35px;
+}
+.hero-info .hero-text {
+	color: #FFF;
+	font-size: 14px;
+}
+.hero-info .hero-date {
+	margin-top: 15px;
+	font-size: 14px;
+	color: #BC9A1D;
+}
+
+main {
+	background: #E5E5E5;
+}
+
+/* Categories */
+.categories-list {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 25px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.categories-list li {
+	margin-right: 40px;
+}
+.categories-list li:last-child {
+	margin-right: 0;
+}
+.categories-list li a {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	color: #E4BB23;
+}
+/* Movies */
+.movies {
+	padding: 25px 0;
+}
+.movies-cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+.movie-card {
+	flex: 1 1 calc(25% - 13px);
+	margin-bottom: 30px;
+	margin-right: 13px;
+}
+.movie-card:nth-child(4n) {
+	margin-right: 0;
+}
+.movie-image {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	position: relative;
+	height: 340px;
+}
+.movie-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.movie-overlay .overlay-movie-name {
+	color: #E4BB23;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.movie-image:hover .movie-overlay {
+	opacity: 1;
+}
+.movie-overlay i {
+	color: #FFF;
+	font-size: 3.5em;
+}
+.movie-image img {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.movie-info {
+	background: #FFF;
+	padding: 10px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.movie-name {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 10px;
+}
+.movie-categorie {
+	font-size: 13px;
+	color: #E4BB23;
+}
+.movie-ratings {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.movie-ratings .icon i {
+	color: #CCCCCC;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+.movie-ratings .icon i:hover {
+	color: #E4BB23;
+}
+.movie-ratings .note {
+	font-weight: bold;
+	color: #000;
+}
+
+/* Footer */
+footer {
+	padding: 35px 0 20px 0;
+}
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-content .social {
+	display: flex;
+	list-style: none;
+}
+.footer-content .social li {
+	margin: 0 20px;
+}
+.footer-content .social li:last-child {
+	margin-right: 0;
+}
+.footer-content .social li a i {
+	color: #CCC;
+	font-size: 1.75em;
+}
+.footer-content .social li:nth-child(1) a i:hover {
+	color: #00ACEE;
+}
+.footer-content .social li:nth-child(2) a i:hover {
+	color: #3B5998;
+}
+
+.footer-content .social li:nth-child(3) a i:hover{
+	 background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
