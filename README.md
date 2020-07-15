@@ -1,4 +1,6 @@
-# Site estático: 🎥 IMDB  
+# Site alimentado - PHP & MySQL: 🎥 IMDB
+
+## Aproveitei o front-end do amigo e fiz apenas uma alimentação vindo do banco de dados.
   
 ## Objetivo: 
 O desafio é desenvolver a página inicial de um site de avaliação de filmes (IMDB - Internet Movies Database) utilizando apenas **HTML5** e **CSS3**.
